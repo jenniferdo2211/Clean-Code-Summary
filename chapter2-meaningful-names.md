@@ -19,6 +19,7 @@ int fileAgeInDays;
 Names are more clear.
 
 <hr style="border: 1px solid gray" />
+
 #### DON'T: 
 ```
 public List<int[]> getThem() {
@@ -64,6 +65,7 @@ Map<Integer, Account> accountGroup = new HashMap<>();
 
 <hr style="border: 1px solid gray" />
 
+
 #### DON'T: 
 ```
 Object XYZControllderForEfficientHandlingOfStrings;
@@ -73,6 +75,7 @@ Names of 2 variables are hard to differentiate.
 
 
 <hr style="border: 1px solid gray" />
+
 
 #### DON'T:
 Don't use lowercase of L (l) which looks similar to number 1.<br />
@@ -86,6 +89,7 @@ Don't write code solely to satisfy complier/interpreter (eg. making small change
 
 
 <hr style="border: 1px solid gray" />
+
 
 #### NOT GOOD:
 ```
@@ -106,6 +110,7 @@ public static void copyChars(char source[], char destination[]) {
 
 
 <hr style="border: 1px solid gray" />
+
 
 #### DON'T:
 Don't name 2 different things with similar name. For example, ProfuctInfo and ProductData.<br />
@@ -160,6 +165,7 @@ MAX_STUDENTS_IN_CLASS is far easier to search for.
 
 <hr style="border: 1px solid gray" />
 
+
 #### DON'T: 
 ```
 Customer c = new Customer();
@@ -175,6 +181,7 @@ Longer name is easier to search for.
 
 
 <hr style="border: 1px solid gray" />
+
 
 Here is an example that demonstrates the above idea.
 #### DON'T:
@@ -231,6 +238,7 @@ for (int i = 0; i < N; i++) {
 
 
 <hr style="border: 1px solid gray" />
+
 #### DON'T:
 for (String r : targetUrls) {
     ...
@@ -254,6 +262,7 @@ public boolean isReady() {...}
 
 
 <hr style="border: 1px solid gray" />
+
 When constructors are overloaded,
 #### NOT GOOD:
 ```
