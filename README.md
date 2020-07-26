@@ -1,6 +1,6 @@
 # Clean Code Summary
-## Book: Clean Code: A Handbook of Agile Software Craftsmanship
-## Author: Robert C. Martin
+### Book: Clean Code: A Handbook of Agile Software Craftsmanship
+### Author: Robert C. Martin
 
 This is my personal note while reading the legendary book Clean Code.
 
