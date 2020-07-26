@@ -6,7 +6,7 @@
 ```
 int d; // elapsed time in days
 ```
-Name of variable should reveal its intention and tell what the variable is for.<br /
+Name of variable should reveal its intention and tell what the variable is for.<br />
 Avoid single-letter variable because it can cause confusion.
 
 #### DO: 
@@ -72,8 +72,8 @@ Names of 2 variables are hard to differentiate.
 ---
 
 #### DON'T:
-Don't use lowercase of L (l) which looks similar to number 1.<br /
-Don't use uppercase of O which looks similar to number 0.<br /
+Don't use lowercase of L (l) which looks similar to number 1.<br />
+Don't use uppercase of O which looks similar to number 0.<br />
 It can be confusing.
 
 ## 2.3. MAKE MEANINGFUL DISTINCTIONS
@@ -103,18 +103,18 @@ public static void copyChars(char source[], char destination[]) {
 ---
 
 #### DON'T:
-Don't name 2 different things with similar name. For example, ProfuctInfo and ProductData.<br /
-The distinction is meaningless, Info and Data are just noise words like a, an, the.<br /
-Noise words are redundant. <br /
-<br /
-The word "variable" should never appear in variable name.<br /
-The word "table" should never appear in table name.<br /
-For example, we have 2 classes Customer and CustomerObjects, how should we understand the different?<br /
+Don't name 2 different things with similar name. For example, ProfuctInfo and ProductData.<br />
+The distinction is meaningless, Info and Data are just noise words like a, an, the.<br />
+Noise words are redundant. <br />
+<br />
+The word "variable" should never appear in variable name.<br />
+The word "table" should never appear in table name.<br />
+For example, we have 2 classes Customer and CustomerObjects, how should we understand the different?<br />
 Don't use names that are hard to distinguish.
 
 
 ## 2.4. USE PRONOUCEABLE NAMES
-Pronounceability is a type of information.<br /
+Pronounceability is a type of information.<br />
 If we can't pronounce it, it's harder to discuss it.
 
 #### DON'T:
@@ -137,7 +137,7 @@ class Customer {
 
 ## 2.4. USE SEARCHABLE NAMES
 
-Numbers or single-letter varible is are hard to search because they are presented everywhere.<br /
+Numbers or single-letter varible is are hard to search because they are presented everywhere.<br />
 
 #### DON'T:
 ```
@@ -158,7 +158,7 @@ MAX_STUDENTS_IN_CLASS is far easier to search for.
 ```
 Customer c = new Customer();
 ```
-Letter 'c' is presented everywhere, it's hard to locate directly to the variable.<br /
+Letter 'c' is presented everywhere, it's hard to locate directly to the variable.<br />
 EXCEPTION: we still can use single-letter variable ONLY IF it is local variable inside a short methods
 
 #### DO: 
@@ -176,8 +176,8 @@ for (int i = 0; i < 34; i++) {
     s += t[i] * 4 / 5;
 }
 ```
-What do 34, 4, and 5 stand for?<br /
-What is s and t?<br /
+What do 34, 4, and 5 stand for?<br />
+What is s and t?<br />
 i is just used in a short scope, so it's okays.
 
 
@@ -211,8 +211,8 @@ public class CarImp implement Car {...}
 ```
 
 ## 2.5. AVOID MENTAL MAPPING
-If the loop is small and short, it is okay for a loop counter to be a one-letter name (eg. i, j or k).<br /
-But when the loop is large, and reader has to remember that letter 'r' stands for 'url', it's better to just replace 'r' with 'url' directly in the code.<br /
+If the loop is small and short, it is okay for a loop counter to be a one-letter name (eg. i, j or k).<br />
+But when the loop is large, and reader has to remember that letter 'r' stands for 'url', it's better to just replace 'r' with 'url' directly in the code.<br />
 Clarity is king!!!
 
 #### OKAY:
@@ -261,8 +261,8 @@ holyHandGrenade -> should be deleteItems
 whack() -> should be kill()
 
 ## 2.9. PICK ONE WORD PER CONCEPT
-fetch - retrieve - get: similar meaning, pick only one for consistency.<br /
-Other examples:<br /
+fetch - retrieve - get: similar meaning, pick only one for consistency.<br />
+Other examples:<br />
 * manager - controller - driver
 * add - insert - append
 
@@ -270,7 +270,7 @@ Other examples:<br /
 Don't use 1 word for 2 concepts or 2 words for 1 concept.
 
 ## 2.10. 
-Feel free to use Computer Science Domain names because readers are programmers.<br /
+Feel free to use Computer Science Domain names because readers are programmers.<br />
 When there are no CS terms for some concepts, use the domain knowledge terms.
 
 ## 2.11. Meaningful context
