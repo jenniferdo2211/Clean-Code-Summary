@@ -1,4 +1,4 @@
-#### [Back to Content Table](https://github.com/jenniferdo2211/Clean-Code-Summary)
+### [Back to Content Table](https://github.com/jenniferdo2211/Clean-Code-Summary)
 
 # CHAPTER 2: MEANINGFUL NAMES
 
@@ -376,3 +376,5 @@ public class GuessStatisticsMessage {
     }
 }
 ```
+
+### [Back to Content Table](https://github.com/jenniferdo2211/Clean-Code-Summary)
