@@ -1,5 +1,6 @@
 # CHAPTER 2: MEANINGFUL NAMES
 
+
 ## 2.1. USE INTENTION-REVEALING NAMES
 
 #### DON'T: 
@@ -39,7 +40,7 @@ Names of variables are not clear, we do not know what those variables are for.
 public List<int[]> getFlaggedCells() {
     List<int[]> flaggedCells = new ArrayList<int[]>();
 
-    for (int[] call : gameBoard)
+    for (int[] cell : gameBoard)
         if (cell[STATUS_VALUE] == FLAGGED)
             flaggedCells.add(cell);
 
@@ -47,6 +48,7 @@ public List<int[]> getFlaggedCells() {
 }
 ```
 When changing the names of variables, we understand the variables better and thus understand the code better.
+
 
 ## 2.2. AVOID DISINFORMATION
 
@@ -81,6 +83,7 @@ Names of 2 variables are hard to differentiate.
 Don't use lowercase of L (l) which looks similar to number 1.<br />
 Don't use uppercase of O which looks similar to number 0.<br />
 It can be confusing.
+
 
 ## 2.3. MAKE MEANINGFUL DISTINCTIONS
 
@@ -123,6 +126,7 @@ For example, we have 2 classes Customer and CustomerObjects, how should we under
 Don't use names that are hard to distinguish.
 
 
+
 ## 2.4. USE PRONOUCEABLE NAMES
 Pronounceability is a type of information.<br />
 If we can't pronounce it, it's harder to discuss it.
@@ -144,6 +148,7 @@ class Customer {
     public static Date modifyTimestamp() {...}
 }
 ```
+
 
 ## 2.4. USE SEARCHABLE NAMES
 
@@ -209,6 +214,7 @@ for (int i = 0; i < NUMBER_OF_TASKS; i++) {
 ```
 Note: sum is not really an useful name but it's searchable and better than s.
 
+
 ## 2.4. INTERFACES AND IMPLEMENTATIONS
 Nowadays, we have 2 styles of naming interfaces and implementations.
 
@@ -223,6 +229,7 @@ Style 2: the authors prefer this one
 public interface Car {...}
 public class CarImp implement Car {...} 
 ```
+
 
 ## 2.5. AVOID MENTAL MAPPING
 If the loop is small and short, it is okay for a loop counter to be a one-letter name (eg. i, j or k).<br />
@@ -249,7 +256,9 @@ for (String url : targetUrls) {
     //...
 }
 
+
 ## 2.6. CLASS NAMES should be nouns
+
 
 ## 2.7. METHOD NAMES
 Should start with a verb.
@@ -274,9 +283,11 @@ Complex fulcrumPoint = Complex(23.0);
 Complex fulcrumPoint = Complex.FromRealNumber(23.0);
 ```
 
+
 ## 2.8. DON'T BE CUTE/HUMOUROUS IN CODE
 holyHandGrenade -> should be deleteItems
 whack() -> should be kill()
+
 
 ## 2.9. PICK ONE WORD PER CONCEPT
 fetch - retrieve - get: similar meaning, pick only one for consistency.<br />
@@ -287,9 +298,11 @@ Other examples:<br />
 #### DON'T: 
 Don't use 1 word for 2 concepts or 2 words for 1 concept.
 
+
 ## 2.10. 
 Feel free to use Computer Science Domain names because readers are programmers.<br />
 When there are no CS terms for some concepts, use the domain knowledge terms.
+
 
 ## 2.11. Meaningful context
 
