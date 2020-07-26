@@ -10,5 +10,5 @@ Please send me a message of how the note can be improved :)
 
 My email: jenniferdo2211@gmail.com
 
-#### [Chapter 1: Clean Code](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/chapter1-clean-code.md)
-#### [Chapter 2: Meaningful Names](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/chapter2-meaningful-names.md)
+#### [Chapter 1: Clean Code](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/English%20version/chapter1-clean-code.md)
+#### [Chapter 2: Meaningful Names](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/English%20version/chapter2-meaningful-names.md)
