@@ -2,6 +2,8 @@
 ### Book - Clean Code: A Handbook of Agile Software Craftsmanship
 ### Author - Robert C. Martin
 
+[Bản tiếng Việt](https://github.com/jenniferdo2211/Clean-Code-Summary/tree/master/Vietnamese%20version)
+
 This is my personal note while reading the legendary book Clean Code.
 
 It will be updated on Sunday, once a week or once every two week.
