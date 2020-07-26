@@ -17,6 +17,7 @@ int daysSinceModification;
 int fileAgeInDays;
 ```
 Names are more clear.
+
 ---
 #### DON'T: 
 ```
@@ -60,6 +61,7 @@ However, we still should not include type of variable in its name.
 Map<Integer, Account> accounts = new HashMap<>();
 Map<Integer, Account> accountGroup = new HashMap<>();
 ```
+
 ---
 
 #### DON'T: 
@@ -68,6 +70,7 @@ Object XYZControllderForEfficientHandlingOfStrings;
 Object XYZControllderForEfficientStorageOfStrings;
 ```
 Names of 2 variables are hard to differentiate.
+
 
 ---
 
@@ -80,6 +83,7 @@ It can be confusing.
 
 #### DON'T:
 Don't write code solely to satisfy complier/interpreter (eg. making small change in name to create another variable name)
+
 
 ---
 
@@ -99,6 +103,7 @@ public static void copyChars(char source[], char destination[]) {
     ...
 }
 ```
+
 
 ---
 
@@ -152,6 +157,7 @@ if (student_count > MAX_STUDENTS_IN_CLASS) {...}
 ```
 MAX_STUDENTS_IN_CLASS is far easier to search for.
 
+
 ---
 
 #### DON'T: 
@@ -166,6 +172,7 @@ EXCEPTION: we still can use single-letter variable ONLY IF it is local variable 
 Customer customer = new Customer();
 ```
 Longer name is easier to search for.
+
 
 ---
 
@@ -222,6 +229,7 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
+
 ---
 #### DON'T:
 for (String r : targetUrls) {
@@ -243,6 +251,7 @@ public String getName() {...}
 public void setName() {...}
 public boolean isReady() {...}
 ```
+
 
 ---
 When constructors are overloaded,
