@@ -1,5 +1,6 @@
-# CHAPTER 2: MEANINGFUL NAMES
+#### [Back to Content Table](https://github.com/jenniferdo2211/Clean-Code-Summary)
 
+# CHAPTER 2: MEANINGFUL NAMES
 
 ## 2.1. USE INTENTION-REVEALING NAMES
 
