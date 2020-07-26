@@ -12,5 +12,5 @@ Mọi đóng góp liên quan đến sách hoặc tóm tắt này, xin gửi về
 
 Cảm ơn mọi người đã đọc.
 
-#### [Chương 1: Code sạch](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/B%E1%BA%A3n%20ti%E1%BA%BFng%20Vi%E1%BB%87t/chuong1-code-sach.md)
-#### [Chapter 2: Đặt tên có nghĩa]
+### [Chương 1: Code sạch](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/B%E1%BA%A3n%20ti%E1%BA%BFng%20Vi%E1%BB%87t/chuong1-code-sach.md)
+### [Chapter 2: Đặt tên có nghĩa]
