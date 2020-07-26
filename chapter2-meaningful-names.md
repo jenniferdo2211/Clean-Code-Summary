@@ -80,15 +80,15 @@ Names of 2 variables are hard to differentiate.
 
 
 #### DON'T:
-Don't use lowercase of L (l) which looks similar to number 1.<br />
-Don't use uppercase of O which looks similar to number 0.<br />
+* Don't use lowercase of L (l) which looks similar to number 1.<br />
+* Don't use uppercase of O which looks similar to number 0.<br />
 It can be confusing.
 
 
 ## 2.3. MAKE MEANINGFUL DISTINCTIONS
 
 #### DON'T:
-Don't write code solely to satisfy complier/interpreter (eg. making small change in name to create another variable name)
+Don't write code solely to satisfy complier/interpreter (eg. making small change in name to create another variable name).
 
 
 <hr style="border: 1px solid gray" />
@@ -116,15 +116,12 @@ public static void copyChars(char source[], char destination[]) {
 
 
 #### DON'T:
-Don't name 2 different things with similar name. For example, ProfuctInfo and ProductData.<br />
+* Don't name 2 different things with similar name. For example, ProfuctInfo and ProductData.<br />
 The distinction is meaningless, Info and Data are just noise words like a, an, the.<br />
-Noise words are redundant. <br />
-<br />
-The word "variable" should never appear in variable name.<br />
-The word "table" should never appear in table name.<br />
-For example, we have 2 classes Customer and CustomerObjects, how should we understand the different?<br />
-Don't use names that are hard to distinguish.
-
+Noise words are redundant.
+* The word "variable" should never appear in variable name.
+* The word "table" should never appear in table name.
+* Don't use names that are hard to distinguish. For example, we have 2 classes Customer and CustomerObjects, how should we understand the different?
 
 
 ## 2.4. USE PRONOUCEABLE NAMES
@@ -197,7 +194,7 @@ for (int i = 0; i < 34; i++) {
 ```
 What do 34, 4, and 5 stand for?<br />
 What is s and t?<br />
-i is just used in a short scope, so it's okays.
+Variable i is just used in a short scope, so it's okays.
 
 
 #### DO:
@@ -234,7 +231,7 @@ public class CarImp implement Car {...}
 ## 2.5. AVOID MENTAL MAPPING
 If the loop is small and short, it is okay for a loop counter to be a one-letter name (eg. i, j or k).<br />
 But when the loop is large, and reader has to remember that letter 'r' stands for 'url', it's better to just replace 'r' with 'url' directly in the code.<br />
-Clarity is king!!!
+#### Clarity is king!!!
 
 #### OKAY:
 ```
@@ -247,21 +244,24 @@ for (int i = 0; i < N; i++) {
 <hr style="border: 1px solid gray" />
 
 #### DON'T:
+```
 for (String r : targetUrls) {
     ...
 }
+```
 
 #### DO:
+```
 for (String url : targetUrls) {
     //...
 }
-
+```
 
 ## 2.6. CLASS NAMES should be nouns
 
 
 ## 2.7. METHOD NAMES
-Should start with a verb.
+Method names should start with a verb.
 ```
 public void postPayment() {...}
 public String getName() {...}
@@ -285,7 +285,7 @@ Complex fulcrumPoint = Complex.FromRealNumber(23.0);
 
 
 ## 2.8. DON'T BE CUTE/HUMOUROUS IN CODE
-holyHandGrenade -> should be deleteItems
+holyHandGrenade -> should be deleteItems<br />
 whack() -> should be kill()
 
 
@@ -296,7 +296,8 @@ Other examples:<br />
 * add - insert - append
 
 #### DON'T: 
-Don't use 1 word for 2 concepts or 2 words for 1 concept.
+Don't use 1 word for 2 concepts or 2 words for 1 concept.<br />
+#### 1 word for 1 concept only!!!
 
 
 ## 2.10. 
