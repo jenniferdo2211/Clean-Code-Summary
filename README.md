@@ -9,7 +9,9 @@ To understand the book "Clean Code" better, I wrote this note to learn it by har
 
 This book, in my opinion, is just a reference but not the truth. We should not be dogmatic when applying rules and principles in this book.<br />
 
-I personally recommend buying paperback version of this book rather than reading pdf version. It could help us concentrate better as our phones are oversimulating our brains, causing boredom and distraction everyday.
+I personally recommend buying paperback version of this book rather than reading pdf version. It could help us concentrate better as our phones are oversimulating our brains, causing boredom and distraction everyday.<br />
+
+Enjoy!
 
 ### [Chapter 1: Clean Code](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/English%20version/chapter1-clean-code.md)
 ### [Chapter 2: Meaningful Names](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/English%20version/chapter2-meaningful-names.md)
