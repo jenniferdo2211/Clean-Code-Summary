@@ -7,8 +7,7 @@
 #### Rule 1: Functions should be small.
 #### Rule 2: Functions should be smaller than that.<br /><br />
 
-Example of a small function.<br />
-`Listing 3-3: HtmlUtil.java`<br />
+Example of a small function: `Listing 3-3: HtmlUtil.java`<br />
 ```
 public static String renderPageWithSetupAndTeardowns(PageData pageData, boolean isSuite) throws Expcetion {
     if (isTestPage(pageData)) 
