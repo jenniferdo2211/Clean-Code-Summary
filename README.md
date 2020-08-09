@@ -15,3 +15,4 @@ Enjoy!
 
 ### [Chapter 1: Clean Code](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/English%20version/chapter1-clean-code.md)
 ### [Chapter 2: Meaningful Names](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/English%20version/chapter2-meaningful-names.md)
+### [Chapter 3: Functions](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/English%20version/chapter3-functions.md)
