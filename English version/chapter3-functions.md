@@ -4,6 +4,9 @@
 
 ## 3.1. SMALL
 
+#### Rule 1: Functions should be small.<br />
+#### Rule 2: Functions should be smaller than that.
+
 Example of a small function.<br />
 `Listing 3-3: HtmlUtil.java`<br />
 ```
@@ -13,9 +16,6 @@ public static String renderPageWithSetupAndTeardowns(PageData pageData, boolean 
     return pageData.getHtml();
 }
 ```
-
-#### Rule 1: Functions should be small.<br />
-#### Rule 2: Functions should be smaller than that.
 
 #### How small should they be?
 * Never be 100 lines long<br />
