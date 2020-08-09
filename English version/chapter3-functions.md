@@ -34,8 +34,8 @@ Functions should do one thing. They should do it well. They should do it only.
 ```
 
 #### (´･ω･`)? How to know if a function is doing one thing?<br />
-* Way 1: A function is doing one thing if we can describe it as a brief `TO` graph.
-* Way 2: A function is doing one thing if we cannot break it into smaller parts.
+* Way 1: A function is doing one thing if we can describe it as **a brief `TO`** graph.
+* Way 2: A function is doing one thing if we **cannot break it into smaller parts**.
 
 Eg. `Listing 3-3: HtmlUtil.java` from 3.1 is described as...<br/>
 TO RenderPageWithSetupAndTeardowns, we check to see whether the page is a test page, and if so, we include the setups and teardowns. In either case, we render the page in HTML.<br/>
@@ -132,7 +132,7 @@ Explanation:<br/>
 * **After:** we use 3 classes for 3 different types of Employees, in each class, we have 3 functions `isPayday, calculatePay, deliverPay`.<br />
 We divide our cases based on employee types and then by functions. This will be better structured.
 
-## 3.4. DESCRIPTIVE NAMES (Please read chapter 2 for more details)
+## 3.4. DESCRIPTIVE NAMES (Please read [chapter 2](https://github.com/jenniferdo2211/Clean-Code-Summary/blob/master/English%20version/chapter2-meaningful-names.md) for more details)
 
 ## 3.5. FUNCTION ARGUMENTS
 
