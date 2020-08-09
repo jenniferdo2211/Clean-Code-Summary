@@ -4,7 +4,7 @@
 
 ## 3.1. SMALL
 
-#### Rule 1: Functions should be small.<br />
+#### Rule 1: Functions should be small.
 #### Rule 2: Functions should be smaller than that.
 
 Example of a small function.<br />
