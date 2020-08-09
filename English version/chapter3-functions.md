@@ -34,7 +34,7 @@ Functions should do one thing. They should do it well. They should do it only.
 ```
 
 #### (´･ω･`)? How to know if a function is doing one thing?<br />
-* Way 1: A function is doing one thing if we can describe it as **a brief `TO`** graph.
+* Way 1: A function is doing one thing if we can describe it as **a brief `TO` graph**.
 * Way 2: A function is doing one thing if we **cannot break it into smaller parts**.
 
 Eg. `Listing 3-3: HtmlUtil.java` from 3.1 is described as...<br/>
@@ -49,9 +49,9 @@ We want every function to be followed by those at the next level of abstraction 
 
 ## 3.4. SWITCH STATEMENTS
 
-Generally, `switch` statements can be tolerate when it appears only once, is used to create polymorphic objects, and are hidden behind the inheritance relationship so that no one can see them.
+Generally, `switch` statements can be tolerate when it appears **only once**, is used to create **polymorphic objects**, and are hidden behind the **inheritance relationship** so that no one can see them.
 
-Considering this function:
+Consider this function:
 ```
 public Money calculatePay (Employee e) throws Invalid EmployeeType {
     switch (e.type) {
