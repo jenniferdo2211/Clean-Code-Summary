@@ -2,7 +2,7 @@
 
 # Tóm tắt sách Code sạch
 ### Tên sách - Clean Code: A Handbook of Agile Software Craftsmanship
-### Dịch nôm - Code Sạch: Sổ Cầm Tay về Sự Lành Nghề của Kỹ Sư Phần Mềm
+### Dịch nôm - Code Sạch: Cuốn sổ tay của kỹ sư lành nghề
 ### Tác giả - Robert C. Martin
 
 Đây là tóm tắt cá nhân của mình. Hy vọng có thể giúp mọi người có thêm nguồn thông tin.<br />
