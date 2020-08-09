@@ -22,10 +22,10 @@ public static String renderPageWithSetupAndTeardowns(PageData pageData, boolean 
 * Should be 4 lines long or even less<br />
 
 This implies that...
-* The blocks of `if` statement, `else` statement, `while` statement and so on should be 1 line long (usually it's a function call).<br />
+* The blocks of `if` statement, `else` statement, `while` statement and so on should be **1 line long** (usually it's a function call).<br />
 -> Keep the enclosing function small and add documentary value (if called function has a nicely descriptive name).
 * Functions should not be large enough to hold a nested structure <br />
--> Max indent level is 1 or 2 and all lines are at the same abstraction level.
+-> **Max indent level is 1 or 2** and all lines are at the **same abstraction level**.
 
 ## 3.2. DO ONE THING
 
