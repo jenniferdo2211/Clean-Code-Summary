@@ -34,7 +34,11 @@ public List<int[]> getThem() {
     return list1;
 }
 ```
-Names of variables are not clear, we do not know what those variables are for.
+Names of variables are not clear, we do not know what those variables are for.<br>
+People while reading may have some questions like:
+* What is `Them` in `getThem`?
+* What are `list1` and `theList`? What are they for?
+* What do number `0` and number `4` in `x[0] == 4` stand for?
 
 #### DO: 
 ```
@@ -49,6 +53,7 @@ public List<int[]> getFlaggedCells() {
 }
 ```
 When changing the names of variables, we understand the variables better and thus understand the code better.
+
 
 
 ## 2.2. AVOID DISINFORMATION
@@ -89,7 +94,7 @@ It can be confusing.
 ## 2.3. MAKE MEANINGFUL DISTINCTIONS
 
 #### DON'T:
-Don't write code solely to satisfy complier/interpreter (eg. making small change in name to create another variable name).
+Don't write code solely to satisfy complier/interpreter (eg. making small change in a variable name to create another variable name).
 
 
 <hr style="border: 1px solid gray" />
@@ -108,7 +113,7 @@ a1 and a2 are not disinformative but they are noninformative.
 #### BETTER:
 ```
 public static void copyChars(char source[], char destination[]) {
-    ...
+    //...
 }
 ```
 
@@ -117,8 +122,8 @@ public static void copyChars(char source[], char destination[]) {
 
 
 #### DON'T:
-* Don't name 2 different things with similar name. For example, ProfuctInfo and ProductData.<br />
-The distinction is meaningless, Info and Data are just noise words like a, an, the.<br />
+* Don't name 2 different things with similar name. For example, `ProfuctInfo` and `ProductData`.<br />
+The distinction is meaningless, `Info` and `Data` are just noise words like a, an, the.<br />
 Noise words are redundant.
 * The word "variable" should never appear in variable name.
 * The word "table" should never appear in table name.

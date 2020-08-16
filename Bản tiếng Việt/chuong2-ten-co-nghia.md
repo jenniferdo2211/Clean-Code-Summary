@@ -2,27 +2,50 @@
 
 # CHƯƠNG 2: TÊN CÓ NGHĨA
 
-## 2.1. TÊN PHẢI THỂ HIỆN MỤC ĐÍCH/Ý ĐỊNH CỦA MÌNH
+## 2.1. TÊN PHẢI THỂ HIỆN MỤC ĐÍCH/Ý ĐỊNH CỦA BIẾN
 
 #### ĐỪNG: 
 ```
 int d; // thời gian tính theo ngày
 ```
 Tên của biến phải thể hiện mục đích của biến và biến đó dùng để làm gì.<br>
+Không nên đặt tên biến linh tinh rồi giải thích lại ý nghĩa của biến bằng comment.<br>
 Tránh những biến chỉ có 1 chữ cái vì nó có thể gây sự khó hiểu hoặc hiểu nhầm.
 
-#### DO: 
+#### NÊN: 
+Bản dịch thô tiếng Việt:
+```
+int thoiGianTinhTheoNgay;
+int soNgayKeTuLucKhoiTao;
+int soNgayKeTuLucThayDoi;
+int fileAgeInDays;
+```
+Bản gốc tiếng Anh:
 ```
 int elapsedTimeInDays;
 int daySinceCreation;
 int daysSinceModification;
 int fileAgeInDays;
 ```
-Names are more clear.
+
+Đặt tên như trên sẽ rõ ràng và dễ hiểu hơn.
 
 <hr style="border: 1px solid gray" />
 
 #### ĐỪNG: 
+Bản dịch thô tiếng Việt:
+```
+public List<int[]> layHet() {
+    List<int[]> danhSach1 = new ArrayList<int[]>();
+    
+    for (int[] x : danhSach) 
+        if (x[0] == 4)
+            danhSach1.add(x);
+
+    return danhSach1;
+}
+```
+Bản gốc tiếng Anh:
 ```
 public List<int[]> getThem() {
     List<int[]> list1 = new ArrayList<int[]>();
@@ -34,9 +57,30 @@ public List<int[]> getThem() {
     return list1;
 }
 ```
-Names of variables are not clear, we do not know what those variables are for.
 
-#### DO: 
+Đặt tên như trên rất khó hiểu, người đọc code sẽ không hiểu được những biến đó để làm gì và những dòng code này đang cố gắng làm gì.<br>
+Người đọc code có thể thắc mắc:
+* `Het` trong `layHet` là lấy hết cái gì?
+* `danhSach1` và `danhSach` là gì?
+* Số `0` và số `4` trong `x[0] == 4` có ý nghĩa gì? Tại sao lại là số `0` và số `4` mà không phải số khác?
+
+#### NÊN:
+Bản dịch thô tiếng Việt:
+```
+private final int TINH_TRANG = 0;
+private final int BI_DANH_DAU = 4;
+
+public List<int[]> layNhungOBiDanhDau() {
+    List<int[]> nhungOBiDanhDau = new ArrayList<int[]>();
+    
+    for (int[] oCo : banCo) 
+        if (oCo[TINH_TRANG] == BI_DANH_DAU)
+            nhungOBiDanhDau.add(oCo);
+
+    return nhungOBiDanhDau;
+}
+```
+Bản gốc tiếng Anh:
 ```
 public List<int[]> getFlaggedCells() {
     List<int[]> flaggedCells = new ArrayList<int[]>();
@@ -48,54 +92,57 @@ public List<int[]> getFlaggedCells() {
     return flaggedCells;
 }
 ```
-When changing the names of variables, we understand the variables better and thus understand the code better.
 
+Khi đổi tên như trên, code trở nên dễ hiểu hơn.
 
-## 2.2. AVOID DISINFORMATION
+## 2.2. TRÁNH GÂY HIỂU NHẦM/THÔNG TIN SAI LỆCH
 
 #### ĐỪNG: 
 ```
 Map<Integer, Account> accountList = new HashMap<>();
 ```
-AccountList is not of type List -> disinformative.<br />
-However, we still should not include type of variable in its name.
+`AccountList` (Danh sách các tài khoản) không phải thuộc loại List (danh sách), mặc dù trong cuộc sống đời thường thì nó có thể thực sự là danh sách.<br />
+Thường thì ta không nên để loại của biến vào tên của biến.
 
-#### DO:
+#### NÊN:
 ```
 Map<Integer, Account> accounts = new HashMap<>();
 Map<Integer, Account> accountGroup = new HashMap<>();
 ```
+`accounts` (các tài khoản) - `accountGroup` (nhóm các tài khoản)
 
 <hr style="border: 1px solid gray" />
-
 
 #### ĐỪNG: 
 ```
-Object XYZControllderForEfficientHandlingOfStrings;
-Object XYZControllderForEfficientStorageOfStrings;
+Object XYZDieuKhienDeXuLyHieuQuaCacChuoi;
+Object XYZDieuKhienDeLuuTruHieuQuaCacChuoi;
 ```
-Names of 2 variables are hard to differentiate.
-
-
-<hr style="border: 1px solid gray" />
-
-
-#### ĐỪNG:
-* ĐỪNG use lowercase of L (l) which looks similar to number 1.<br />
-* ĐỪNG use uppercase of O which looks similar to number 0.<br />
-It can be confusing.
-
-
-## 2.3. MAKE MEANINGFUL DISTINCTIONS
-
-#### ĐỪNG:
-ĐỪNG write code solely to satisfy complier/interpreter (eg. making small change in name to create another variable name).
-
+Tên của hai biến quá khó để phân biệt.
 
 <hr style="border: 1px solid gray" />
 
+#### ĐỪNG:
+* ĐỪNG sử dụng chữ L thường (l) vì nó trông như số 1.<br />
+* ĐỪNG sử dụng chữ o hoa (O) vì nó trông như số 0.<br />
 
-#### NOT GOOD:
+## 2.3. SỰ KHÁC BIỆT PHẢI CÓ Ý NGHĨA
+
+#### ĐỪNG:
+ĐỪNG viết code chỉ để thỏa mãn trình biên dịch (compiler), ví dụ: thay đổi tên của 1 biến một chút để tạo ra 1 tên biến mới, taiKhoanNganHang - taiKhoanNagnHang - taiKhoanNganHanggg
+
+<hr style="border: 1px solid gray" />
+
+#### KHÔNG NÊN:
+Bản dịch thô tiếng Việt:
+```
+public static void saoChepChuoi(char a1[], char a2[]) {
+    for (int i = 0; i < a1.length; i++) {
+        a2[i] = a1[i];
+    }
+}
+```
+Bản gốc tiếng Anh:
 ```
 public static void copyChars(char a1[], char a2[]) {
     for (int i = 0; i < a1.length; i++) {
@@ -103,31 +150,35 @@ public static void copyChars(char a1[], char a2[]) {
     }
 }
 ```
-a1 and a2 are not disinformative but they are noninformative.
+a1 và a2 không gây sai lệch thông tin nhưng chúng là những cái tên vô nghĩa và không giúp hàm dễ hiểu hơn.
 
-#### BETTER:
+#### NÊN:
+Bản dịch thô tiếng Việt:
+```
+public static void saoChepChuoi(char nguon[], char dichDen[]) {
+    //...
+}
+```
+Bản gốc tiếng Anh:
 ```
 public static void copyChars(char source[], char destination[]) {
-    ...
+    //...
 }
 ```
 
-
 <hr style="border: 1px solid gray" />
 
-
 #### ĐỪNG:
-* ĐỪNG name 2 different things with similar name. For example, ProfuctInfo and ProductData.<br />
-The distinction is meaningless, Info and Data are just noise words like a, an, the.<br />
-Noise words are redundant.
-* The word "variable" should never appear in variable name.
-* The word "table" should never appear in table name.
-* ĐỪNG use names that are hard to distinguish. For example, we have 2 classes Customer and CustomerObjects, how should we understand the different?
+* ĐỪNG đặt tên 2 thứ khác nhau với tên na ná nhau. Ví dụ, `ProductInfo` (thông tin sản phẩm) và `ProductData` (dữ liệu về sản phẩm).<br />
+Sự khác biệt trong tên của hai biến này không mang lại nhiều ý nghĩa vì `Info` (thông tin) có nghĩa gần giống với `Data` (dữ liệu).<br />
+* Từ `bien` (biến) không bao giờ nên có trong tên biến, ví dụ `soPhongBien`.
+* Tương tự, từ `bang` (bảng) không bao giờ nên có trong tên của biến thuộc loại bảng.
+* ĐỪNG sử dụng tên khó phân biệt. Ví dụ, ta có 2 lớp (class) Customer (Khach hang) and CustomerObjects (Đối tượng khách hàng), chúng ta nên hiểu chúng khác nhau như nào?
 
 
 ## 2.4. USE PRONOUCEABLE NAMES
-Pronounceability is a type of information.<br />
-If we can't pronounce it, it's harder to discuss it.
+Sử dụng tên mà ta có thể phát âm được, đừng đặt tên linh tinh.<br />
+Nếu chúng ta không thể đọc được tên biến (vd. `nfdsnke`), sẽ khó hơn để bàn về nó.
 
 #### ĐỪNG:
 ```
@@ -138,7 +189,7 @@ class DtaRcrd102 {
 }
 ```
 
-#### DO:
+#### NÊN:
 ```
 class Customer {
     private final String recordId = "102";
@@ -158,7 +209,7 @@ if (student_count > 7) {...}
 ```
 7 is hard to search for when we have many 7 in different places with different meanings.
 
-#### DO:
+#### NÊN:
 ```
 int MAX_STUDENTS_IN_CLASS = 7;
 if (student_count > MAX_STUDENTS_IN_CLASS) {...}
@@ -176,7 +227,7 @@ Customer c = new Customer();
 Letter 'c' is presented everywhere, it's hard to locate directly to the variable.<br />
 EXCEPTION: we still can use single-letter variable ONLY IF it is local variable inside a short methods
 
-#### DO: 
+#### NÊN: 
 ```
 Customer customer = new Customer();
 ```
@@ -198,7 +249,7 @@ What is s and t?<br />
 Variable i is just used in a short scope, so it's okays.
 
 
-#### DO:
+#### NÊN:
 ```
 int NUMBER_OF_TASKS = 34;
 int realDaysPerIdealDay = 4;
@@ -251,7 +302,7 @@ for (String r : targetUrls) {
 }
 ```
 
-#### DO:
+#### NÊN:
 ```
 for (String url : targetUrls) {
     //...
@@ -274,12 +325,12 @@ public boolean isReady() {...}
 <hr style="border: 1px solid gray" />
 
 When constructors are overloaded,
-#### NOT GOOD:
+#### KHÔNG NÊN:
 ```
 Complex fulcrumPoint = Complex(23.0);
 ```
 
-#### BETTER:
+#### NÊN:
 ```
 Complex fulcrumPoint = Complex.FromRealNumber(23.0);
 ```
@@ -308,7 +359,7 @@ When there are no CS terms for some concepts, use the domain knowledge terms.
 
 ## 2.11. Meaningful context
 
-#### NOT GOOD:
+#### KHÔNG NÊN:
 ```
 private void printGuessStatistics(char candidate, int count) {
     String number;
@@ -335,7 +386,7 @@ private void printGuessStatistics(char candidate, int count) {
 ```
 Function is a bit too long and the context is not clear.
 
-#### BETTER:
+#### NÊN:
 ```
 public class GuessStatisticsMessage {
     private String number;
