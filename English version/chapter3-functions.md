@@ -136,9 +136,51 @@ We divide our cases based on employee types and then by functions. This will be 
 
 ## 3.5. FUNCTION ARGUMENTS
 
-The number of arguments for a function should be 0 (niladic), next comes 1 (monadic), followed closely by 2 (dyadic).<br/>
-3 arguments (triadic) should be avoided where possible. More than 3 (polyadic) requires very special justification - and they shouldn't be used anyway.
+The number of arguments for a function should be 0, next comes 1, followed closely by 2.<br/>
+3 arguments should be avoided where possible. More than 3 requires very special justification - and they shouldn't be used anyway.
 
-[to be continued...]
+### Single Argument Functions (1 Argument or Monadic Functions):
+
+Two very common reasons to pass a single argument into a function
+* Asking a question about the argument.<br/>
+Eg. `fileExists("myFile")`
+* Operating on that argument, transforming it into something else and then return it.<br/>
+Eg. `InputStream fileOpen("myFile")` -> transforming a `String` into `InputStream`
+
+A less common form of single argument function is an event. The overall program is meant to interpret the function call as an event and use the argument to alter the state of the system.
+In this form, there is one input but no output. The nqme should be very clear to reader that this is an event<br/>
+Eg. `passwordAttemptFailedNTimes(int attempts)`
+
+Try to avoid arguments that don't follow these forms.<br/>
+Eg. `void includeSetupPageInfo(StringBuffer pageText)`<br/>
+Using an output argument (`pageText`) with no return (`void`) instead of return value (`return ...`) is confusing.<br/>
+Indeed, `StringBuffer transform(StringBuffer in)` is better than `void transform(StringBuffer out)` even if the implementation of the first case simple return the `in`
+
+### Flag Arguments (Boolean Arguments)
+
+Passing a boolean into a function is truly terrible practice. It immediately complicates the signature of the method and proclaims that the method is doing more than 1 thing. It does one thing if the flag (boolean argument) is true and another if the flag is false.
+
+render(boolean isSuite) should be split into 2 functions: renderForSuite() and renderForSingleTest()
+
+### Two-Argument Function (Dyadic Functions)
+
+A function with 2 arguments is harder to understand than a function with 1 argument.<br>
+Eg. `writeField(name)` is easier to understand than `writeField(outputStream, name)`.<br> 
+Though the meaning of both is clear, the first glides past the eye, easily depositing its meaning. The second requires a short pause until we learn to ignore the first argument. And that, of course, eventually results in problems because we should never ignore any part of code. The parts we ignore are where the bugs will hide.
+
+Perfect case for two arguments is `new Point(x, y)`.<br>
+
+Even the obvious function like assertEquals(expected, actual) are problematic. How many times have you put the `actual` where the `expected` should be? The two arguments have no natural ordering. The ordering `expected, actual` takes time to learn.
+
+Two-argument functions aren't evil but you should think of how to transform them into single arugment functions.<br>
+Eg. from `writeField(outputStream, name)`, you can...
+* make `writeField(name)` as a member of `outputStream`, so you can call it as `outputStream.writeField(name)`
+* make `outputStream` as a memeber of current class, so you don't have to pass it.
+* extract a new class `FieldWriter` that takes `outputStream` in constructor and has a `write(name)` method
+
+### Three-Arugment Function (Triads)
+Functions with three arguments are significantly harder to understand than functions with two arguments. The issues of ordering, pausing and ignoring are more than doubled. 
+
+
 
 ### [Back to Content Table](https://github.com/jenniferdo2211/Clean-Code-Summary)
